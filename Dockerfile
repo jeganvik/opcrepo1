@@ -6,4 +6,4 @@ RUN mvn -f /usr/src/app/pom.xml clean package
 
 FROM tomcat 
 RUN rm -fr /usr/local/tomcat/webapps/ROOT
-COPY --from=Stage1 /usr/src/app/target/testapp1.war /usr/local/tomcat/webapps/ROOT.war
+COPY --from=Stage1 /usr/src/app/target/testapp.war /usr/local/tomcat/webapps/ROOT.war
